@@ -1,0 +1,45 @@
+{% extends "principal/base.html" %} 
+
+{% load static %}
+{% block content %}
+
+
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">Mejores Promedios</h1>
+      <p class="lead text-muted">El presente esta dirigido a los estudiantes, Algunas palabras tienen el poder de reconfortar y hacernos sentir capaces de cualquier cosa. Fortalecen nuestra confianza y nos animan a emprender</p>
+    </div>
+  </div>
+</section>
+{% for i in p %}
+   <!-- fotos de sirculos -->
+   <div style="padding-left: 170px;" class="row">
+    <div class="col-lg-4">
+      <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{i.foto_primer_estudiante.url}}" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">
+       <br>
+      <h2>{{i.nombre_primer_estudiante}} {{ i.apellido_primer_estudiante}}</h2>
+      <p>{{i.created}}</p>
+      
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{i.foto_segundo_estudiante.url}}" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">
+
+      <h2>{{i.nombre_segundo_estudiante}}  {{ i.apellido_segundo_estudiante}}</h2>
+      <p>{{i.created2}}</p>
+     
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{i.foto_tercer_estudiante.url}}" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">
+
+      <h2>{{i.nombre_tercer_estudiante}} {{ i.apellido_tercer_estudiante}} </h2>
+      <p>{{i.created3}}</p>
+     
+    </div><!-- /.col-lg-4 -->
+  </div><!-- /.row -->
+  <div>
+    <br>
+
+  {% endfor %}
+    
+  {% endblock %}

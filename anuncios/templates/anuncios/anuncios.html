@@ -1,0 +1,33 @@
+{% extends "principal/base.html" %} 
+
+{% load static %}
+{% block content %}
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 text-white rounded bg-primary">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">Mantente informado Con las noticias de Alarico Gomez</h1>
+      <p class="lead my-3">Aqui podras saver todos los acontessimientos con respecto al Liceo Nacional Alarico G&oacute;mez</p>
+    </div>
+  </div>
+
+  {% for i in p %}
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Noticias</strong>
+          <h3 class="mb-0">{{i.titulo}}</h3>
+          <div class="mb-1 text-muted">{{i.created}}</div>
+          <p class="card-text mb-auto">{{i.contenido}}</p>
+         
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img" width="190" height="240" src="{% static 'proyectowebApp/imagenes/simbolo.jpg' %}" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="90%" height="90%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+
+        </div>
+      </div>
+    </div>
+   
+ {% endfor %}
+
+{% endblock %}

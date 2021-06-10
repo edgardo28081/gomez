@@ -1,0 +1,154 @@
+{% extends "principal/base.html" %} 
+{% block content %}
+
+    {% load static %}
+  
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Galeria de fotos</h1>
+        <p class="lead text-muted">Aqui puedes ver todos los recuerdos de nuestra Institucion, Graduaciones, Eventos deportivos, culturales, musicales entre otros.</p>
+     
+      </div>
+    </div>
+  
+  </section>
+  {% for i in p %} 
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{i.foto1.url}}" role="img" aria-label="Placeholder: ???? ?????" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">{{i.titulo_evento}}</text>
+
+            <div class="card-body">
+              <p class="card-text">{{i.contenido}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+               
+                <small class="text-muted">Fecha: {{i.created}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{i.foto2.url}}" role="img" aria-label="Placeholder: ???? ?????" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+
+            <div class="card-body">
+              <p class="card-text">{{i.contenido_2}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+               
+                <small class="text-muted">Fecha: {{i.created2}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{i.foto3.url}}" role="img" aria-label="Placeholder: ???? ?????" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+
+            <div class="card-body">
+              <p class="card-text">{{i.contenido_3}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+             
+                <small class="text-muted">Fecha: {{i.created3}}  </small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{i.foto4.url}}" role="img" aria-label="Placeholder: ???? ?????" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+
+            <div class="card-body">
+              <p class="card-text">{{i.contenido_4}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+              
+                <small class="text-muted">Fecha:  {{i.created4}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{i.foto5.url}}" role="img" aria-label="Placeholder: ???? ?????" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+
+            <div class="card-body">
+              <p class="card-text">{{i.contenido_5}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+               
+                <small class="text-muted">Fecha:  {{i.created5}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{i.foto6.url}}" role="img" aria-label="Placeholder: ???? ?????" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+
+            <div class="card-body">
+              <p class="card-text">{{i.contenido_6}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+               
+                <small class="text-muted">Fecha: {{i.created6}} </small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{i.foto7.url}}" role="img" aria-label="Placeholder: ???? ?????" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+
+            <div class="card-body">
+              <p class="card-text">{{i.contenido_7}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+               
+                <small class="text-muted">Fecha:  {{i.created7}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{i.foto8.url}}" role="img" aria-label="Placeholder: ???? ?????" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+
+            <div class="card-body">
+              <p class="card-text">{{i.contenido_8}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+               
+                <small class="text-muted">Fecha:  {{i.created8}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{i.foto9.url}}" role="img" aria-label="Placeholder: ???? ?????" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+
+            <div class="card-body">
+              <p class="card-text">{{i.contenido_9}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+               
+                <small class="text-muted">Fecha: {{i.created9}} </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ {% endfor %}
+</main>
+
+
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+      
+
+{% endblock %}
